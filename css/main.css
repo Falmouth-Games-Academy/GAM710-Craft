@@ -2,7 +2,7 @@
  * @Author: alcwynparker
  * @Date:   2018-05-03T11:14:24+01:00
  * @Last modified by:   alcwynparker
- * @Last modified time: 2018-05-03T13:25:34+01:00
+ * @Last modified time: 2018-05-03T14:03:49+01:00
  */
 
 
@@ -254,5 +254,5 @@ footer{
   bottom:0;
   left:0;
   text-align: center;
-  padding:3px;
+  padding:3px 0px 20px 0px;
 }
