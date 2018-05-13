@@ -52,6 +52,17 @@
     drawDiamond(ctx, 160, 100, 50, 50, true);
     drawDiamond(ctx, 180, 100, 50, 50, true);
 
+    // create a new image object
+    var img = new Image();
+
+    // add an eventlistener for when the image has finished loading
+    img.onload = function () {
+      ctx.drawImage(img, 100, 200);
+    }
+
+    // set the src - this begins the loading of the image
+    img.src = "img/box.png";
+
   } else {
     console.log("This browser does not support the Canvas Element!")
   }
