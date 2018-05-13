@@ -14,17 +14,20 @@ git merge 2.css
 git checkout 4.js
 git merge 3.wire-frame
 
-git checkout 5.canvas
+git checkout 4.5.debug
 git merge 4.js
 
+git checkout 5.canvas
+git merge 4.5.debug
+
 git checkout 6.canvas
-git merge 5.js
+git merge 5.canvas
 
 git checkout 7.audio
 git merge 6.canvas
 
 git checkout 8.audio
-git merge 6.audio
+git merge 7.audio
 
 git checkout 9.api
 git merge 8.audio
