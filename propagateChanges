@@ -14,9 +14,11 @@ git merge 2.css
 git checkout 4.js
 git merge 3.wire-frame
 
+git checkout 4.5.debug
+git merge 4.js
 
 git checkout 5.canvas
-git merge 4.js
+git merge 4.5.debug
 
 git checkout 6.canvas
 git merge 5.canvas
