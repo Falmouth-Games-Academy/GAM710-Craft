@@ -1,4 +1,9 @@
 #!/bin/bash
+git add .
+git commit -m "commit by bash script $(date)"
+
+$(date)
+
 git checkout 1.html
 git merge 0.setup
 
