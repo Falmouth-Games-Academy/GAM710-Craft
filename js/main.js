@@ -22,8 +22,6 @@
     sideNav.style.width = '0';
   });
 
-
-
-
+  // Canvas
 
 })(window, document);

@@ -1,0 +1,15 @@
+#!/bin/bash
+git checkout 1.html
+git merge 0.setup
+
+git checkout 2.css
+git merge 1.html
+
+git checkout 3.wire-frame
+git merge 2.css
+
+git checkout 4.js
+git merge 3.wire-frame
+
+git checkout 5.canvas
+git merge 4.js

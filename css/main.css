@@ -2,7 +2,7 @@
  * @Author: alcwynparker
  * @Date:   2018-05-03T11:14:24+01:00
  * @Last modified by:   alcwynparker
- * @Last modified time: 2018-05-03T17:03:39+01:00
+ * @Last modified time: 2018-05-03T17:27:46+01:00
  */
 
 
@@ -310,4 +310,14 @@ footer{
 .side-nav ul li a.active{
   color: #fff;
   text-decoration:underline;
+}
+
+
+/* ==========================================================================
+   Canvas
+   ========================================================================== */
+
+#canvas{
+  width:100%;
+  
 }
