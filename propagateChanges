@@ -1,0 +1,39 @@
+#!/bin/bash
+git add .
+git commit -m "commit by bash script $(date)"
+
+git checkout 1.html
+git merge 0.setup
+
+git checkout 2.css
+git merge 1.html
+
+git checkout 3.wire-frame
+git merge 2.css
+
+git checkout 4.js
+git merge 3.wire-frame
+
+git checkout 4.5.debug
+git merge 4.js
+
+git checkout 5.canvas
+git merge 4.5.debug
+
+git checkout 6.canvas
+git merge 5.canvas
+
+git checkout 7.audio
+git merge 6.canvas
+
+git checkout 8.audio
+git merge 7.audio
+
+git checkout 9.api
+git merge 8.audio
+
+git checkout 10.promises
+git merge 9.api
+
+git checkout 11.cordova
+git merge 10.promises
