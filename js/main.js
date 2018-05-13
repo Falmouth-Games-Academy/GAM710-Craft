@@ -22,7 +22,7 @@
     sideNav.style.width = '0';
   });
 
-  // 5-6 Canvas
+  // 5.Canvas
   //
   // First we must retrieve the canvas element and get the canvas context to draw on
   var canvas = document.getElementById('drawing-area');
@@ -67,8 +67,6 @@
     console.log("This browser does not support the Canvas Element!")
   }
 
-
-
   /**
    * drawDiamond - Helper function to draw a diamond to the canvas context
    * @param  {Object} ctx - the canvas context to draw on
@@ -94,5 +92,66 @@
     // if requested fill the inside of the diamond
     if (fill) ctx.fill();
   }
+
+  // 6.Canvas
+  //
+  // Start with a simple animation
+
+  // starting coordinates
+  var animPos = [-30, 10];
+
+  // start the loop
+  window.requestAnimationFrame(update);
+
+
+  /**
+   * update - loop to handle all the animations
+   *
+   * @param  {Number} timeStamp - the time in millis since app started
+   */
+  function update(timeStamp){
+    // output timestamp to console
+    //console.log('Tick: ' + timeStamp);
+
+    // draw a diamond to the canvas
+    drawDiamond(ctx, animPos[0], animPos[1], 10, 10, true);
+
+    // move along the x axis
+    animPos[0]+=10;
+
+    // check for boundaries
+    if (animPos[0] > 350){
+      animPos[1] += 20;
+      animPos[0] = -30;
+    }
+
+    // animation stops when it gets to 400 on the y axis
+    if (animPos[1] < 400) {
+      // call the update loop again
+      window.requestAnimationFrame(update);
+    }
+  }
+
+  canvas.addEventListener("touchend", handleTouch, false);
+  var canvasBounds = canvas.getBoundingClientRect();
+
+  function handleTouch (e) {
+    e.preventDefault();
+
+    console.log(e.changedTouches[0]);
+
+    // create a new image object
+    var img = new Image();
+
+    // add an eventlistener for when the image has finished loading
+    img.onload = function () {
+      ctx.drawImage(img, e.changedTouches[0].clientX - canvasBounds.left, e.changedTouches[0].clientY - canvasBounds.top);
+    }
+
+    // set the src - this begins the loading of the image
+    img.src = "img/phi.png";
+
+  }
+
 
 })(window, document);
