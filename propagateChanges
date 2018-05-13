@@ -18,3 +18,21 @@ git merge 3.wire-frame
 
 git checkout 5.canvas
 git merge 4.js
+
+git checkout 6.canvas
+git merge 5.js
+
+git checkout 7.audio
+git merge 6.canvas
+
+git checkout 8.audio
+git merge 6.audio
+
+git checkout 9.api
+git merge 8.audio
+
+git checkout 10.promises
+git merge 9.api
+
+git checkout 11.cordova
+git merge 10.promises
