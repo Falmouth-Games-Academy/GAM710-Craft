@@ -18,8 +18,8 @@
         <nav id="side-nav" class="side-nav">
           <a href="#" id="side-nav-close">&times;</a>
           <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="graphics.html">Graphics</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="graphics.html" class="active">Graphics</a></li>
             <li><a href="audio.html">Audio</a></li>
             <li><a href="api.html">API</a></li>
           </ul>
@@ -34,18 +34,14 @@
               </g>
             </svg>
           </div>
-          <h1> Code Craft </h1>
+          <h1> Canvas </h1>
         </header>
 
         <main>
-          <h1>Welcome</h1>
-          <img class="logo" src="https://www.w3.org/html/logo/downloads/HTML5_1Color_Black.png" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula velit, porttitor sed ante ac, tincidunt pellentesque lacus. Nulla congue sit amet elit vitae tempus. Vivamus imperdiet in diam a consequat. Nunc sodales nulla ante, sed laoreet mauris scelerisque vel. Donec a enim sollicitudin, feugiat justo vitae, dapibus erat. Aenean fermentum metus dolor, id commodo dui eleifend ut. Sed tempus ipsum varius mattis feugiat. Sed rhoncus convallis sapien.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula velit, porttitor sed ante ac, tincidunt pellentesque lacus. Nulla congue sit amet elit vitae tempus. Vivamus imperdiet in diam a consequat. Nunc sodales nulla ante, sed laoreet mauris scelerisque vel. Donec a enim sollicitudin, feugiat justo vitae, dapibus erat. Aenean fermentum metus dolor, id commodo dui eleifend ut. Sed tempus ipsum varius mattis feugiat. Sed rhoncus convallis sapien.
-          </p>
+          <canvas id="drawing-area" width="300" height="450">
+            <!-- fallback text for if the browser doesn't support canvas or js -->
+            <p> An interactive playground for tinkering with graphics. </p>
+          </canvas>
         </main>
 
         <footer>
